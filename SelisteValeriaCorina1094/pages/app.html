@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple and efficient todo list.">
+    <meta name="theme-color" content="#121212">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="shortcut icon" href="../favicon.svg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./assets/images/Arkana-192.png">
+    <title>Arkana</title>
+</head>
+<body>
+    <header>
+        <nav class="flex justify-between p-2">
+            <!-- Left side of navbar -->
+            <a class="flex items-center" href="../index.html">
+                <img src="../assets/images/Arkana.svg" alt="Arkana logo" width="64px" height="64px">
+                <span class="text-2xl font-bold">Arkana</span>
+            </a>
+            <div>
+                <div class="popup">
+                    <button id="zen-modal-opener" class="bg-transparent">Zen Mode</button>
+                </div>
+            </div>
+        </nav>
+
+        <div id="zen-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="flex flex-col items-center">
+                    <div class="flex justify-center mb-2">
+                        <video class="w-100 sm-w-75" src="../assets/video/forest.mp4" autoplay loop muted></video>
+                        <audio id="zen-audio" src="../assets/audio/forest.ogg" autoplay loop></audio>
+                    </div>
+                    <div class="flex justify-center mb-2">
+                        <img width="40px" id="zen-play-button" class="multimedia-control" src="../assets/icons/play.svg" alt="Play button">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="w-100 sm-w-75 mx-auto flex flex-col sm-flex-row justify-around items-center mb-2">
+            <input id="new-task-input" class="flex-grow text-white text-lg font-semibold p-2 mb-2 sm-mb-0" type="text" placeholder="Add a new task...">
+            <button id="new-task-button" class="flex-shrink sm-ml-2">Add now</button>
+        </div>
+        <section id="tasks-container" class="flex flex-col w-100 sm-w-75 mx-auto">
+
+        </section>
+    </main>
+</body>
+
+<script src="./app.js"></script>
+</html>

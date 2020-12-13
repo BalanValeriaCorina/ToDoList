@@ -1,0 +1,24 @@
+{
+    "name": "Arkana",
+    "short_name": "Arkana",
+    "theme_color": "#f775bc",
+    "background_color": "#121212",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "./assets/images/Arkana-192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any maskable"
+        },
+
+        {
+            "src": "./assets/images/Arkana-512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        }
+    ]
+  }

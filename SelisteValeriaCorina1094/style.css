@@ -1,0 +1,438 @@
+/*******************************************************/
+/***************** Default styles *********************/
+/*****************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #121212;
+    width: 100%;
+}
+
+* body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    align-self: center;
+    color: #f775bc;
+}
+
+h1 {
+    color: #f775bc;
+    align-self: center;
+}
+
+header {
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+}
+
+header nav {
+    background-color: rgba(18, 18, 18, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+input {
+    font-family: 'Roboto', sans-serif;
+    border-width: 2px;
+    border-color: #f775bc;
+    border-radius: 1rem;
+    border-style: solid;
+    background-color: #202020;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: #121212;
+    border: 2px solid #f775bc;
+    border-radius: .5rem;
+    color: white;
+    cursor: pointer;
+    transition-property: color background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    background-color: #f775bc;
+    color: #121212;
+    transition: all .3s ease-in-out;
+}
+
+.multimedia-control {
+    cursor: pointer;
+}
+
+.card {
+    background-color: #202020;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+
+.card img {
+    max-width: 50%;
+}
+
+.task-wrapper {
+    background-color: #202020;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    cursor: grab;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #202020;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/******************************************************/
+/****************** Utility classes ******************/
+/****************************************************/
+
+/* Positions, displays, layout */
+.flex {
+    display: flex;
+}
+
+.flex-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-shrink {
+    flex-shrink: 1;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.inline {
+    display: inline;
+}
+
+.relative {
+    position: relative;
+}
+
+/* Typography size */
+.text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+.text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+}
+
+/* Typography font weight */
+.font-normal {
+    font-weight: 400;
+}
+
+.font-semibold {
+    font-weight: 500;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-extrabold {
+    font-weight: 900;
+}
+
+.text-white {
+    color: white;
+}
+
+/* Text alignment */
+.text-center {
+    text-align: center;
+}
+
+/* Dimensions, margins, padding, borders */
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.ml-0 {
+    margin-left: 0;
+}
+
+.ml-2 {
+    margin-left: 2rem;
+}
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.border-2 {
+    border-width: 2px;
+    border-style: solid;
+}
+
+.rounded-2 {
+    border-radius: 0.25rem;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+/* Colors and backgrounds */
+.bg-white {
+    background-color: white;
+}
+
+.bg-dark {
+    background-color: #121212;
+}
+
+.bg-transparent {
+    background: transparent;
+}
+
+.hover-invert {
+    transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color background-color;
+}
+
+.hover-invert:hover {
+    color: #121212;
+    background-color: #f775bc;
+    transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color background-color;
+}
+
+/* Animations and cool effects */
+.glowy-background {
+    filter: blur(5px);
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    z-index: -1;
+    background-image: linear-gradient(to right bottom, #f945a3, #e02ca6, #c413aa, #a200ae, #7900b1, #9f00a1, #ba0090, #cd0081, #f9335c, #ff7032, #fcab00, #d8e108, #7900b1, #a200ae, #c413aa, #f945a3);    background-size: 400%;
+    animation: glow 20s linear infinite;
+}
+
+.card-effect-container {
+    transform-style: preserve-3d;
+    transform: perspective(50rem);
+}
+
+.card-effect {
+    position: relative;
+    transition: transform .6s;
+}
+
+.text-effect-first {
+    animation: showup 4s;
+    animation-fill-mode: forwards;
+}
+
+.text-effect-last {
+    opacity: 0;
+    animation-name: showup;
+    animation-duration: 3s;
+    animation-delay:1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:1;}
+}
+
+@keyframes glow {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/**************************************************************************/
+/******************* Styles for diferent screen sizes ********************/
+/************************************************************************/
+
+@media only screen and (min-width: 640px) {
+    .card img {
+        max-width: 30%;
+    }
+
+    .sm-p-2 {
+        padding: 0.5rem;
+    }
+
+    .sm-p-4 {
+        padding: 1rem;
+    }
+
+    .sm-text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+    
+    .sm-text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+
+    .sm-w-25 {
+        width: 25%;
+    }
+
+    .sm-flex-row {
+        flex-direction: row;
+    }
+
+    .sm-flex-reverse {
+        flex-direction: row-reverse;
+    }
+    
+    .sm-mb-0 {
+        margin-bottom: 0;
+    }
+
+    .sm-ml-2 {
+        margin-left: 2rem;
+    }
+
+    .sm-w-75 {
+        width: 75%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .md-text-2xl {
+        font-size: 1.7rem;
+        line-height: 2rem;
+    }
+
+    .md-text-6xl {
+        font-size: 3.75rem;
+        line-height: 1;
+    }
+
+    .text-3d {
+        text-shadow: 
+            2px 1px 0px #831853,
+            3px 2px 0px #72224d,
+            4px 3px 0px #4b1130;
+    }
+
+    .md-w-75 {
+        width: 75%;
+    }
+}

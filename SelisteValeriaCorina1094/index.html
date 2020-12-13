@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple and efficient todo list.">
+    <meta name="theme-color" content="#121212">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./assets/images/Arkana-192.png">
+    <title>Arkana</title>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register("service-worker.js", { scope: '/' })
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="flex justify-between p-2">
+            <!-- Left side of navbar -->
+            <a class="flex items-center" href="./index.html">
+                <img src="./assets/images/Arkana.svg" alt="Arkana logo" width="64px" height="64px">
+                <span class="text-2xl font-bold">Arkana</span>
+            </a>
+            
+            <!-- Right side of navbar -->
+            <div class="flex items-center">
+                <a class="p-2 sm-text-lg font-semibold border-2 rounded-2 bg-dark hover-invert text-center" href="./pages/app.html">Launch application</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="flex flex-col justify-center items-center h-screen">
+            <div id="card-logo-container" class="flex justify-center w-100">
+                <img id="card-logo" class="w-50 sm-w-25 card-effect card-effect-container" src="./assets/images/Arkana.svg" alt="Arkana spellbook logo">
+            </div>
+            <div class="text-effect-container w-100 flex justify-center">
+                <h1 class="text-2xl sm-text-4xl md-text-6xl font-extrabold text-3d text-effect-first inline">Arkana</h1>
+                <h1 class="text-xl sm-text-4xl md-text-6xl font-extrabold text-3d text-effect-last inline">&ThinSpace;|&ThinSpace;Solve tasks like magic!</h1>
+            </div>
+        </section>
+
+        <section class="flex flex-col justify-center p-4">
+            <div class="w-100 md-w-75 card flex flex-col sm-flex-row items-center mx-auto">
+                <img class="flex-shrink" src="./assets/images/add_tasks.svg" alt="Woman adding task on a panel">
+                <div class="flex flex-col flex-grow justify-center">
+                    <h2 class="text-center md-text-2xl">Manage your tasks with ease</h2>
+                    <p class="text-center text-lg font-semibold">With Arkana you can log, track and complete all of your tasks from the confort of your browser.</p>
+                </div>
+            </div>
+            <div class="w-100 md-w-75 card flex flex-col items-center sm-flex-reverse mx-auto">
+                <img class="flex-shrink" src="./assets/images/time_management.svg" alt="time management">
+                <div class="flex flex-col flex-grow justify-center">
+                    <h2 class="text-center md-text-2xl">Keep track of your time</h2>
+                    <p class="text-center text-lg font-semibold">Be more productive with our new Pomodoro feature. Get on top of your tasks with maximal efficiency.</p>
+                </div>
+            </div>
+            <div class="w-100 md-w-75 card flex flex-col sm-flex-row items-center mx-auto">
+                <img class="flex-shrink" src="./assets/images/fun.svg" alt="Listening to music">
+                <div class="flex flex-col flex-grow justify-center">
+                    <h2 class="text-center md-text-2xl">Do it all with more fun</h2>
+                    <p class="text-center text-lg font-semibold">Who said you can't have fun while working? Try our new Zen mode and relax while going through your daily tasks.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="flex">
+            <canvas id="canvas-img" width="400" height="400"></canvas>
+        </div>
+    </footer>
+</body>
+
+<script src="./index.js"></script>
+<script src="./effects.js"></script>
+</html>
